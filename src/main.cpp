@@ -1,5 +1,6 @@
 #include <cstddef>
 #include <iostream>
+#include <ostream>
 #include <string>
 #include <cctype>
 #include <stdexcept>
@@ -133,16 +134,19 @@ int main(int argc, char* argv[]) {
     }
 
     std::string input_line;
-    std::getline(std::cin, input_line);
-    
-    try {
-        if (match_pattern(input_line, pattern)) {
-            return 0;
-        } else {
-            return 1;
-        }
-    } catch (const std::runtime_error& e) {
-        std::cerr << e.what() << std::endl;
-        return 1;
+    bool any_match = false;
+
+    while (std::getline(std::cin, input_line)) {
+	try {
+	    if (match_pattern(input_line, pattern)) {
+		std::cout << input_line << std::endl;
+		any_match = true;
+	    }
+	} catch (const std::runtime_error& e) {
+	    std::cerr << e.what() << std::endl;
+	    return 1;
+	}
     }
+    return any_match ? 0 : 1;
 }
+
