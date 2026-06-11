@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/grep.dir/link.d CMakeFiles/grep.dir/src/main.cpp.o -o grep

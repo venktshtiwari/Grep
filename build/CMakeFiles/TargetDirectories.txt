@@ -1,3 +1,0 @@
-/home/venkatesh/codecrafters-grep-cpp/grep-cpp/build/CMakeFiles/grep.dir
-/home/venkatesh/codecrafters-grep-cpp/grep-cpp/build/CMakeFiles/edit_cache.dir
-/home/venkatesh/codecrafters-grep-cpp/grep-cpp/build/CMakeFiles/rebuild_cache.dir
